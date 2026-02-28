@@ -4,6 +4,10 @@
   "description": "在 Java 文件中右键复制当前方法的完全限定引用（类名#方法名）到剪贴板",
   "version": "0.1.0",
   "publisher": "java-fqn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chen-Xiao-Hui/java-fqn.git"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
