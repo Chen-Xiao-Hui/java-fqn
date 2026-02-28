@@ -1,0 +1,42 @@
+{
+  "name": "java-fqn",
+  "displayName": "Java 方法引用复制",
+  "description": "在 Java 文件中右键复制当前方法的完全限定引用（类名#方法名）到剪贴板",
+  "version": "0.1.0",
+  "publisher": "java-fqn",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:java"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "javaFqn.copyMethodReference",
+        "title": "复制方法引用 (FQN)"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "javaFqn.copyMethodReference",
+          "when": "editorLangId == java"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0"
+  }
+}
